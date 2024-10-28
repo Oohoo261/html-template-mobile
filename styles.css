@@ -1,33 +1,78 @@
 /* สไตล์พื้นฐานของฟอร์มทั้งหมด */
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* แสดงในแนวตั้ง */
+    justify-content: space-between; /* มีพื้นที่ระหว่าง header, main และ footer */
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    max-width: 720px; /* กำหนดความกว้างสูงสุด */
+    max-height: 1280px; /* กำหนดความสูงสูงสุด */
+    overflow: hidden; /* ป้องกัน scroll bar */
+}
+
+/* สไตล์สำหรับ Header Bar */
+.container-header {
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดแนวให้มีความสูงเท่ากัน */
+    justify-content: space-between; /* มีพื้นที่ระหว่าง title และปุ่ม */
+    width: 100%; /* ทำให้ header มีความกว้าง 100% */
+    max-width: 600px; /* กำหนด maximum width ตามที่ต้องการ */
+    margin: 0 auto; /* จัดให้อยู่กลาง */
+}
+
+.header-bar {
+    display: flex;
+    align-items: center; /* จัดแนวให้มีความสูงเท่ากัน */
+    width: 100%; /* ทำให้ header มีความกว้าง 100% */
+    padding: 0; /* เพิ่ม padding */
+    background-color: #007bff; /* สีพื้นหลังของ header */
+    color: #ffffff; /* สีตัวอักษร */
+}
+
+/* สไตล์สำหรับ Title */
+.header-bar h1 {
+    flex-grow: 1; /* ทำให้ title ขยายเต็มพื้นที่ที่ว่าง */
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    margin: 0; /* ลบ margin ของ h1 */
+}
+
+/* สไตล์ปุ่ม List */
+.list-button {
+    width: 60px; /* ความกว้าง */
+    height: 60px; /* กำหนดความสูงให้เหมาะสม */
+    margin: 0; /* เพิ่ม margin ให้ปุ่ม */
+    padding: 0; /* ลบ padding */
+    font-size: 1.4em; /* ขนาดฟอนต์ */
+    color: #ffffff; /* สีตัวอักษร */
+    background-color: #28a745; /* สีพื้นหลัง */
+    border: none; /* ไม่ใช้กรอบ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+}
+
+.list-button:hover {
+    background-color: #218838; /* สีพื้นหลังเมื่อ hover */
 }
 
 /* สไตล์ container สำหรับ main.html */
 .container-main {
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 600px; /* กำหนดความกว้างสูงสุด */
+    height: 100%; /* ปรับความสูงให้เป็น 100% ของหน้าจอลบ header และ footer */
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
     box-sizing: border-box;
+    overflow-y: auto; /* เพิ่ม scroll bar หากเนื้อหามากเกินไป */
 }
 
-/* สไตล์ container สำหรับ form.html */
 .container-form {
-    width: 90%;
-    max-width: 600px;
-    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 600px; /* กำหนดความกว้างสูงสุด */
+    height: 100%; /* ความสูง 100% */
+    background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
@@ -35,23 +80,21 @@ body {
 .container-main .form-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 15px;
 }
 
-/* สไตล์ label ใน main.html */
+/* สไตล์ label และ input */
 .container-main label {
-    font-size: 1em;
+    font-size: 1.3em;
     margin-bottom: 5px;
     text-align: left;
     width: 100%;
 }
 
-/* สไตล์สำหรับ input ใน main.html */
 .container-main input[type="text"] {
     width: 100%;
     padding: 8px;
-    font-size: 1em;
+    font-size: 1.3em;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -66,7 +109,7 @@ body {
 
 /* สไตล์ label ใน form.html */
 .container-form label {
-    font-size: 1em;
+    font-size: 1.3em;
     width: 30%;
     padding-right: 5px;
     text-align: left;
@@ -76,17 +119,17 @@ body {
 .container-form input[type="text"] {
     width: 70%;
     padding: 8px;
-    font-size: 1em;
+    font-size: 1.3em;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-/* สไตล์ปุ่ม */
+/* สไตล์ปุ่ม Submit */
 button {
     width: 100%;
     padding: 12px;
-    font-size: 1em;
+    font-size: 1.3em;
     color: #ffffff;
     background-color: #007bff;
     border: none;
@@ -97,4 +140,35 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* สไตล์สำหรับ Footer Bar */
+.container-footer {
+    display: flex; /* ใช้ flexbox */
+    justify-content: space-around; /* จัดปุ่มให้มีระยะห่างเท่ากัน */
+    align-items: center; /* จัดแนวให้มีความสูงเท่ากัน */
+    width: 100%; /* กว้างเต็มที่ */
+    max-width: 600px; /* ความกว้างสูงสุด */
+    padding: 0px; /* เพิ่ม padding */
+    background-color: #007bff; /* สีพื้นหลังของ footer */
+    color: #ffffff; /* สีตัวอักษร */
+    position: fixed; /* ทำให้ footer อยู่ที่ด้านล่างของหน้า */
+    bottom: 0; /* จัดให้อยู่ที่ด้านล่าง */
+}
+
+/* สไตล์สำหรับปุ่มใน Footer */
+.footer-button {
+    height: 80px; /* กำหนดความสูงให้เหมาะสม */
+    margin: 0; /* เพิ่ม margin ให้ปุ่ม */
+    padding: 0; /* ลบ padding */
+    background-color: #007bff; /* สีพื้นหลัง */
+    color: #ffffff; /* สีตัวอักษร */
+    border: none; /* ไม่มีกรอบ */
+    font-size: 1.3em; /* ขนาดฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    transition: background-color 0.3s; /* เพิ่ม transition */
+}
+
+.footer-button:hover {
+    background-color: #0056b3; /* สีพื้นหลังเมื่อ hover */
 }
