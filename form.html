@@ -39,7 +39,7 @@
         </div>
         <div class="form-group">
             <label for="PO_NO">PO NO:</label>
-            <input type="text" id="PO_NO" placeholder="">
+            <input type="text" id="PO_NO" placeholder="" readonly>
         </div>
         <div class="form-group">
             <label for="VENDOR">VENDOR:</label>
@@ -60,10 +60,27 @@
         <button type="submit">Submit</button>
     </div>
 
-    <footer class="container-footer">
+    <div class="container-footer">
         <button class="footer-button">SEARCH</button>
         <button class="footer-button">HOME</button>
         <button class="footer-button">BACK</button>
-    </footer>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set the value of PO_NO from the URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const poNo = getUrlParameter('po_no');
+            if (poNo) {
+                document.getElementById('PO_NO').value = poNo; // Set the PO NO field
+            }
+        });
+    </script>
+
 </body>
 </html>

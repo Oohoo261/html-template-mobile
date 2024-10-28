@@ -172,3 +172,48 @@ button:hover {
 .footer-button:hover {
     background-color: #0056b3;
 }
+
+/* Login Form Container */
+.container-login {
+    width: 100%;
+    max-width: 720px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container-login button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.container-login button[type="submit"]:hover {
+    background-color: #005bb5;
+}
