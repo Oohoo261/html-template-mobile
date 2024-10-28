@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
@@ -59,7 +59,7 @@ body {
 /* สไตล์ container สำหรับ main.html */
 .container-main {
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
     height: 100%;
     background-color: #ffffff;
     padding: 30px;
@@ -69,7 +69,7 @@ body {
 
 .container-form {
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
     height: 100%;
     background-color: #ffffff;
     padding: 30px;
@@ -148,7 +148,7 @@ button:hover {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
     padding: 0px;
     background-color: #007bff;
     color: #ffffff;
